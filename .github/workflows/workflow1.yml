@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - name: testing ssh connection
-      uses: appleboy/ssh-action@master
+      uses: BogdanGrekk/ssh-action@master
       with:
         host: ftpupload.net
         username:	epiz_30815335
