@@ -1,15 +1,18 @@
-on: push
-name: 🚀 Deploy website on push
+on:
+  push:
+    branches:
+      - main
+name: Deployment
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: Get latest code
       uses: actions/checkout@v2
     
-    - name: 📂 Sync files
-      uses: EVO/FTP-Deploy-Action@4.2.0
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: ftp.bogdangrekk.lovestoblog.com
         username: epiz_30815335
