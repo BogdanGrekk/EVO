@@ -9,7 +9,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: 📂 Sync files
-      uses: BogdanGrekk/FTP-Deploy-Action@4.2.0
+      uses: EVO/FTP-Deploy-Action@4.2.0
       with:
         server: ftp.bogdangrekk.lovestoblog.com
         username: epiz_30815335
