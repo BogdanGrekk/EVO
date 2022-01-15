@@ -13,4 +13,4 @@ jobs:
       with:
         server: ftp.bogdangrekk.lovestoblog.com
         username: epiz_30815335
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.password }}
