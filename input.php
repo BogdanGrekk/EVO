@@ -10,7 +10,7 @@ if(is_file($datafile))
         $datalines = file($datafile);
         $rt = true;
         foreach ($datalines as $line) {
-            if(preg_match('/^'.$name. '/ius', $line))
+            if(preg_match('/^'.$name. '/ius', $line) and preg_match('/^'.$surename. '/ius', $line))
             {
                 $rt = false;
                 break;
@@ -19,18 +19,23 @@ if(is_file($datafile))
         if($rt){
             echo 'Привіт, '. $name;
             echo ' '. $surename;
+            fseek($fd, 0, SEEK_END);
+            fwrite($fd, $name);
+            fwrite($fd, " ");
+            fwrite($fd, $surename);
+            fwrite($fd, "\n");
+            fseek($fd, 0, SEEK_END);
+            fclose($fd);
+            echo "<p style='margin-left: .5em;'></p>","<form action=http://bogdangrekk.lovestoblog.com><button><i>Повернутись на головну</i></button></form>";
         }
-        else
+        else{
             echo 'Вже бачилися, '. $name;
-                }
-        else
-            echo 'Можуть бути використані лише букви і декотрі символи';
+            echo "<p style='margin-left: .5em;'></p>","<form action=http://bogdangrekk.lovestoblog.com><button><i>Повернутись на головну</i></button></form>";
         }
-fseek($fd, 0, SEEK_END);
-fwrite($fd, $name);
-fwrite($fd, " ");
-fwrite($fd, $surename);
-fwrite($fd, "\n");
-fseek($fd, 0, SEEK_END);
-fclose($fd);
+                }
+    else{
+        echo 'Можуть бути використані лише букви і декотрі символи';
+        echo "<p style='margin-left: .5em;'></p>","<form action=http://bogdangrekk.lovestoblog.com><button><i>Повернутись на головну</i></button></form>";
+    }
+    }
 ?>
