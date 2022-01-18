@@ -34,3 +34,9 @@
 ## Посилання
 
 - Посилання на Docker hub - https://hub.docker.com/repository/docker/bogdangrekk/task2.1
+- Посилання на сайт - http://bogdangrekk.lovestoblog.com
+
+## Вигляд сайту
+
+![image](https://user-images.githubusercontent.com/85605310/149966942-d95bcaba-67ab-4b6f-bc90-552ecc82aaaa.png)
+
