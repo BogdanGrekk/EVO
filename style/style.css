@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding: 0;
+  display: grid;
 }
 header {
   background: #B0DDDD;
@@ -7,7 +9,16 @@ header {
 }
 .main {
   background: #F9F9F9;
-  height: 584px;
+  height: 100%;
+}
+
+.bbff{
+    text-align: center;
+}
+.ddd{
+    margin: 20px 10px;
+    max-width: 300px;
+    text-align: center;
 }
 footer {
   background: #DCCEC8;
@@ -15,7 +26,7 @@ footer {
 }
 .container {
   width: 100%;
-  max-width: 1024px; 
+  max-width: 1024px;
   padding: 0 15px;
   margin: 0 auto;
   background: #FFD0AB;
@@ -23,6 +34,28 @@ footer {
 }
 .logo {
   float: left;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 20px;
+}
+.img-bof{
+    max-width: 50px;
+}
+.row {
+  margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+.col-img{
+    width: 24%;
+    margin: 20px 40px;
+}
+.col-2-3 {
+  width: 24.333%;
+}
+.li1{
+   display: inline-block;
 }
 form {
   margin: 0 auto;
@@ -31,7 +64,6 @@ form {
   border: 1px solid #000000;
   border-radius: 1.5em;
 }
-
 ul {
   list-style: none;
   padding: 0;
