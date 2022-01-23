@@ -10,7 +10,7 @@ if(is_file($datafile))
         $datalines = file($datafile);
         $rt = true;
         foreach ($datalines as $line) {
-            if(preg_match('/^'.$name. '/ius', $line) and preg_match('/^'.$surename. '/ius', $line))
+            if(preg_match('/^'.$name. '/ius', $line))
             {
                 $rt = false;
                 break;
