@@ -9,12 +9,11 @@ if(is_file($datafile))
     {
         $datalines = file($datafile);
         $rt = true;
-        foreach ($datlines as $nl){
-            foreach($datalines as $sl){
-                if(preg_match('/^'.$name. '/ius', $nl) and preg_match('/^'.$surename. '/ius', $sl)){
-                    $rt=false;
-                    break;
-                }
+        foreach ($datalines as $line) {
+            if(preg_match('/^'.$name. '/ius', $line) and preg_match('/^'.$surename. '/ius', $line))
+            {
+                $rt = false;
+                break;
             }
         }
         if($rt){
