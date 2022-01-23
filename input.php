@@ -9,13 +9,13 @@ if(is_file($datafile))
     {
         $datalines = file($datafile);
         $rt = true;
-        foreach ($datlines as $nl) {
+        foreach ($datlines as $nl){
         foreach($datalines as $sl){
-            if(preg_match('/^'.$name. '/ius', $nl) and preg_match('/^'.$surname. '/ius', $sl)){
+            if(preg_match('/^'.$name. '/ius', $nl) and preg_match('/^'.$surename. '/ius', $sl)){
                 $rt=false;
                 break;
             }
-       }
+        }
     }
         if($rt){
             echo 'Привіт, '. $name;
